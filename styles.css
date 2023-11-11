@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box; /* allows our width, padding and margin to work nicely*/
+}
+
+body {
+ font-family: sans-serif;
+}
+
+header {
+    background-color: #FAF2EC;
+    height: 90px;
+    width: 99.1vw;
+    position: absolute;
+    z-index: 1;
+} 
+
+.smallimg{
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vw;
+    transform: translateY(30%) translateX(10%);
+
+}
+
+body { /* refernce from ChatGPT to help out on how to create a gradient*/
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 100% of the viewport height */
+    background: linear-gradient(to bottom, #EDC199 , #8D5509);
+    /* Adjust the colors and gradient direction as needed */
+    color: white; /* Text color on the gradient background */
+    font-family: Arial, sans-serif; /* Choose your desired font-family */
+}
+
+ul{
+    margin: 0;
+    padding: 10px;
+    margin-right: 20px;
+    
+}
+
+.navi{ 
+    border: solid 2px #8D5509; 
+    top: 30px;
+    position: fixed;
+    text-align: right;
+    width: 24vw;
+    right:20px;
+    z-index: 999;
+}
+
+.navi, ul, li{
+    display: inline-block;
+    padding: 10px;
+    background-color: #FAF2EC;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    padding: 10px 20px 10px 20px;
+
+}
+
+
+#burger, label {
+  display:none;
+  font-size: 40px;
+}
+
+label{
+  cursor:pointer;
+}
+
+
+.screen1, .screen2, .screen3, .screen4 {
+    height: 100vh;
+}
+
+.screen2, .screen3 {
+    background-color: #EDC199;
+}
+
+.screen4{
+    background-color: #F8B77C;
+}
+
+.screen1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen2{
+    display: flex;
+    justify-content: space-between;
+    /*space between two columns*/
+}
+
+.ani{
+    max-width: 60vw;
+    max-height: 60vh;
+    transform:  translateY(-40%) translateX(-40%);
+}
+
+.animg {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: bounce 1s infinite; 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); 
+    }
+    20% {
+        transform: translateY(-30px); 
+    }
+    90% {
+        transform: translateY(0); 
+    }
+}
+
+#SB{
+    transform: translateY(700%);
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.ititle{
+    padding: 20px;
+}
+.info{
+    border-radius:30px;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    max-height: 80vh;
+    max-width: 30vw;
+    background-color: #E28F1E;
+    transform: translateY(10%) translateX(-50%);
+}
+
+.aimg, .pimg, .uimg{
+    border-radius: 10%;
+}
+
+.pimg, .uimg{
+    max-height: 30vh;
+    max-width: 30vw;
+} 
+
+.aimg{
+    transform: translateY(10%) translateX(30%);
+    max-height: 50vh;
+    max-width: 50vw;
+    z-index: 9;
+}
+
+.pimg{
+    z-index: 3;
+    transform: translateY(-10%) translateX(150%);
+}
+
+.uimg{
+    transform: translateY(-50%) translateX(100%);
+}
+
+
+.screen3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.drop-down {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    z-index: 2;
+    
+}
+
+.carousel1, .carousel2, .carousel3{
+
+    height: 70vh;
+    width: 80vw;
+    position: relative;
+    display: flex;
+    
+}
+
+.carousel2, .carousel3{
+    display: none;
+}
+
+.image-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Three equal-width columns */
+    gap: 50px;
+}
+
+
+.colour1 {
+
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.image1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url('images/Addict.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.screen4{
+    display:flex;
+    gap: 20px; /* produce a desried gap between elements*/
+    
+}
+
+.map {
+    border-radius: 30px;
+    background-color: #8D5509;
+    height: 800px;
+    width: 800px;
+    transform: translateY(10%) translateX(10%);
+}
+
+.imap{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: solid 2px #8D5509;
+    background-image: url('images/Map.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.loco{
+   
+    border: solid 3px #FAF2EC;
+    height: 75vh;
+    width: 90vh;
+    transform: translateY(20%) translateX(20%);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-container {
+    overflow-y: hidden;
+    height: 200%;
+    animation: scrollAnimation 5s linear infinite;
+}
+
+
+@keyframes scrollAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%); /* Adjust the percentage based on your needs */
+    }
+}
+
+#box{
+    border: solid 2px #8D5509;
+    height: 20vh;
+    width: 45vw;
+    display: flex;
+
+}
+
+.circle{
+    background-color: #8D5509;
+    height: 150px;
+    width: 150px;
+    transform: translateX(10%) translateY(10%);
+    border-radius: 50%;
+}
+
+.locoimg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url('images/locoicon.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.address{
+    font-size: 25px;
+    height: 5vh;
+    width: 30vw;
+    transform: translateX(10%) translateY(150%);
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #8D5509;
+}
+
+
+
+
